@@ -8,14 +8,16 @@ if($_SERVER["REQUEST_METHOD"]== "POST"){
     $user_Id = $_POST["user_Id"];
     
     $query = "INSERT INTO teams 
-        (name, user_id, faction_Id)
+        (name, user_Id, faction_Id)
         VALUES('$name','$user_Id','$faction_Id');";
     
     $result = mysqli_query($connection,$query);
     if($result){
-        echo json_encode("Data inserted");
+        $val['response']= '100';
+        echo json_encode($val);
 
     }else{
-        echo json_encode("error occured");
+        $val['response'] = '404';
+        echo json_encode($val);
     }
 }
