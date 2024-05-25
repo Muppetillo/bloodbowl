@@ -1,6 +1,6 @@
 <?php
 include 'connection.php';
-
+//Recoleccion todas las razas
 $query = "SELECT * FROM factions";
 $results = mysqli_query($connection,$query);
 $val = array();

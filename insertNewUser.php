@@ -1,4 +1,5 @@
 <?php
+//Insercion de nuevo usuario
 if($_SERVER["REQUEST_METHOD"]== "POST"){
     require_once 'connection.php';
     

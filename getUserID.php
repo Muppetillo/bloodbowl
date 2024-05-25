@@ -1,4 +1,5 @@
 <?php
+//Login y devolucion de ID
 include 'connection.php';
 if($_SERVER["REQUEST_METHOD"]== "GET") {
     $userName = $_GET['userName'];

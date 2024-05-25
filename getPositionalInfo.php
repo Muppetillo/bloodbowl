@@ -1,6 +1,7 @@
 <?php
 include 'connection.php';
 if($_SERVER["REQUEST_METHOD"]== "GET") {
+    //Get para recoger info e los posicionales
     $faction_Id = $_GET['faction_Id'];
     $query = "SELECT SUBSTRING(p.name,4) As name, p.ma,p.st,p.ag,p.pa,p.av,GROUP_CONCAT(ps.skill_Id) As 'skills' ,p.price,p.maxQty
     FROM positionals p 
