@@ -15,4 +15,3 @@ if(mysqli_num_rows($results)>0){
     $val['response'] = "There is no data";
     echo json_encode($val);
 }
-?>
