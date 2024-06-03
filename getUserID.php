@@ -4,7 +4,7 @@ include 'connection.php';
 if($_SERVER["REQUEST_METHOD"]== "GET") {
     $userName = $_GET['userName'];
     $pwd = $_GET['pwd'];    
-    $query = "SELECT u.ID
+    $query = "SELECT u.ID, u.name
     FROM users u 
     WHERE name = '$userName' AND password = '$pwd'";
     $results = mysqli_query($connection,$query);
